@@ -59,6 +59,13 @@ const resetCSS = `
 export const GlobalStyles =  createGlobalStyle`
   ${resetCSS}
 
+  html,
+  body,
+  #root, /* for create-react-app */
+  #__next /* for Next.js */ {
+    height: 100%;
+}
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
