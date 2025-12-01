@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './constants';
 
 
 const resetCSS = `
@@ -66,13 +67,44 @@ export const GlobalStyles =  createGlobalStyle`
     height: 100%;
 }
 
+  /* DESIGN TOKENS */
+  html {
+    --color-white: ${COLORS.white};
+    --color-offblack: ${COLORS.offblack};
+    
+    --color-gray-100: ${COLORS.gray[100]};
+    --color-gray-200: ${COLORS.gray[200]};
+    --color-gray-300: ${COLORS.gray[300]};
+    --color-gray-400: ${COLORS.gray[400]};
+    --color-gray-500: ${COLORS.gray[500]};
+    --color-gray-600: ${COLORS.gray[600]};
+    --color-gray-700: ${COLORS.gray[700]};
+    --color-gray-800: ${COLORS.gray[800]};
+    --color-gray-900: ${COLORS.gray[900]};
+    --color-gray-1000: ${COLORS.gray[1000]};
+    
+    --color-primary-300: ${COLORS.primary[300]};
+    --color-primary-500: ${COLORS.primary[500]};
+    --color-primary-700: ${COLORS.primary[700]};
+    
+    --color-secondary-300: ${COLORS.secondary[300]};
+    --color-secondary-500: ${COLORS.secondary[500]};
+    --color-secondary-700: ${COLORS.secondary[700]};
+    
+    --color-accent-300: ${COLORS.accent[300]};
+    --color-accent-500: ${COLORS.accent[500]};
+    --color-accent-700: ${COLORS.accent[700]};
+  }
+
+  
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
+    background-color: var(--color-white);
+    color: var(--color-gray-900);
   }
 
   code {
@@ -81,7 +113,7 @@ export const GlobalStyles =  createGlobalStyle`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.primary};
+    color: var(--color-accent-300);
   }
 
 `

@@ -10,18 +10,13 @@ export const theme = {
     error: '#ef4444',
     success: '#10b981',
   },
-  spacing: {
-    xs: '0.25rem',
-    sm: '0.5rem',
-    md: '1rem',
-    lg: '1.5rem',
-    xl: '2rem',
-    xxl: '3rem',
-  },
+
   typography: {
     sizes: {
+      xsm: '0.75rem',
       sm: '0.875rem',
       md: '1rem',
+      mdlg: '1.125rem',
       lg: '1.25rem',
       xl: '1.5rem',
       xxl: '2rem',
